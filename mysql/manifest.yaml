@@ -23,4 +23,18 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: sudhanaga1002/mysql:1.0.0            
+        image: sudhanaga1002/mysql:1.0.0 
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: mysql
+spec:
+  selector: #labels are used as selectors
+    app: mysql
+    tier: mysql
+    project: expense
+  ports:
+  - protocol: TCP
+    port: 3306 #service port port exposed inside the cluster, Port exposed by the Service (what clients see).
+    targetPort: 3306 # port on the pod/container where app is runnung
