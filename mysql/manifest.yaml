@@ -1,0 +1,26 @@
+kind: Deployment
+apiVersion: v1
+metadata:
+  name: mysql
+  namespace: expense
+  labels:
+    app: mysql
+    tier: mysql
+    project: expense
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+      tier: mysql
+      project: expense
+  template:
+    metadata:
+      labels:
+         app: mysql
+         tier: mysql
+         project: expense
+    spec:
+      containers:
+      - name: mysql
+        image: sudhanaga1002/mysql:1.0.0            
