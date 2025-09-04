@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: sudhanaga1002/frontend:1.1.0
+        image: sudhanaga1002/frontend:1.2.0
 ---
 kind: Service
 apiVersion: v1
