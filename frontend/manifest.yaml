@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: sudhanaga1002/frontend:1.0.0
+        image: sudhanaga1002/frontend:1.1.0
 ---
 kind: Service
 apiVersion: v1
@@ -39,4 +39,4 @@ spec:
   ports:
   - protocol: TCP
     port: 80
-    targetPort: 80                         
+    targetPort: 8080                        
